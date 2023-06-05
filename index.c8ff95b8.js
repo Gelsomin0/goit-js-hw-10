@@ -1,2 +1,0 @@
-const e={headers:{"x-api-key":"live_4jedRlAWSRx3jFyMn5M3JGRQ8rFrFURgp3h7GLTPmakUBvLr0FdhVLk6nvXpBVyl"}};const t=new class{fetchBreeds(){return fetch("https://api.thecatapi.com/v1/breeds",e).then((e=>e.json()))}constructor(){}},n={breedSelect:document.querySelector(".breed-select")};t.fetchBreeds().then((e=>{!function(e){const t=e.map((e=>{const{id:t,name:n}=e;return`\n            <option value='${t}'>${n}</option>\n        `})).join("");n.breedSelect.insertAdjacentHTML("beforeend",t)}(e)}));
-//# sourceMappingURL=index.c8ff95b8.js.map

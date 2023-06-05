@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+}
+
+.breed-select {
+    display: none;
+    font-size: 16px;
+}
+
+.breed-select.js-visible {
+    display: block;
+}
+
+.cat-info {
+    display: none;
+    align-items: center;
+    gap: 35px;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: calc(100% - 200px);
+}
+
+.cat-info.js-visible {
+    display: flex;
+}
+
+.cat-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.evidance {
+    font-weight: 600;
+}
+
+.loader {
+    display: none;
+    color: green;
+}
+
+.loader.js-visible{
+    display: block;
+}
+
+.error {
+    display: none;
+    color: rgb(205, 6, 6);
+}
+
+.error.js-visible {
+    display: block;
+}

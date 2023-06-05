@@ -1,4 +1,5 @@
-import { CatApiService } from "./cat-api"
+import { CatApiService } from "./cat-api";
+import Notiflix from 'notiflix';
 
 const catApiService = new CatApiService();
 const ell = {
@@ -19,7 +20,7 @@ function getCatBreeds() {
         setCatNamesList(res);
     }).catch((err) => {
         ell.loader.classList.remove('js-visible');
-        ell.error.classList.add('js-visible');
+        Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
     })
 }
 
@@ -67,6 +68,6 @@ function getCatInfo(e) {
         console.log('Opps! Some error!', err);
 
         ell.loader.classList.remove('js-visible');
-        ell.error.classList.add('js-visible');
+        Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
     });
 }

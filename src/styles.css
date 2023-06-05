@@ -5,6 +5,13 @@ body {
 .breed-select {
     display: none;
     font-size: 16px;
+    overflow-y: scroll;
+    width: 200px;
+}
+
+#selectElement {
+    overflow-y: scroll;
+    width: 200px;
 }
 
 .breed-select.js-visible {

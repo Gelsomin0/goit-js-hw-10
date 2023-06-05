@@ -1,5 +1,7 @@
 import { CatApiService } from "./cat-api";
 import Notiflix from 'notiflix';
+import SlimSelect from 'slim-select';
+import 'slim-select/dist/slimselect.css';
 
 const catApiService = new CatApiService();
 const ell = {
@@ -18,6 +20,14 @@ function getCatBreeds() {
 
     catApiService.fetchBreeds().then((res) => {
         setCatNamesList(res);
+
+        new SlimSelect({
+            select: '#selectElement',
+            settings: {
+                showSearch: false,
+                placeholderText: 'Please, select a cat...',
+            }
+        })
     }).catch((err) => {
         ell.loader.classList.remove('js-visible');
         Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page!');
